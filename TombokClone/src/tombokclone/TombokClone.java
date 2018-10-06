@@ -30,6 +30,7 @@ public class TombokClone {
         ketDimenziosTomb();
         System.out.println(" ");
         ketDimenziosTombElforgatva();
+        System.out.println("");
     }
     public static int [] randomTombFeltöltés(int tombHossza){
         int []tomb=new int[tombHossza];
