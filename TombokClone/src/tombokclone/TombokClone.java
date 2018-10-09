@@ -18,6 +18,8 @@ public class TombokClone {
     /**
      * @param args the command line arguments
      */
+    
+   
     public static void main(String[] args) {
         // TODO code application logic here
                
@@ -31,6 +33,22 @@ public class TombokClone {
         System.out.println(" ");
         ketDimenziosTombElforgatva();
         System.out.println("");
+        System.out.println( Byte.MIN_VALUE);
+        double p=Math.PI;
+        double e=Math.E;
+        System.out.println("Pí "+p+" Euler-féle szám"+e);
+        System.out.println(Math.random()*100);
+        System.out.println("Adja meg a kör sugarát");
+        double r=sc.nextDouble();
+        korKertuletTerulet(r);
+        String s="alkatraz";
+        System.out.println(s);
+        System.out.println(s.replace("a", "e"));
+        StringBuffer sb=new StringBuffer("Ez a string buffer szöveg");
+        sb.append(s);
+        System.out.println(sb.capacity());
+        System.out.println(sb.insert(5, s));
+        lexikoGrafikus();
     }
     public static int [] randomTombFeltöltés(int tombHossza){
         int []tomb=new int[tombHossza];
@@ -122,6 +140,33 @@ public class TombokClone {
          szam-=101;
         }
        
+    }
+    public static void korKertuletTerulet(double r){
+        double terulet=Math.PI*Math.pow(r, 2);
+        System.out.println("A kör területe:"+terulet);
+        double kerulet=2*(Math.PI*r);
+        System.out.println("A kör kerülete: "+kerulet); 
+   }
+    public static void lexikoGrafikus(){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Adja meg a karakterláncok számát");
+        int szam=sc.nextInt();
+        
+        String [] sb=new String[szam];
+        for (int i = 0; i < szam; i++) {
+            System.out.println("Adja meg a "+(i+1)+" karakterláncot");
+            sb[i]=sc.next();
+        }
+        String legkisseb=" ";
+        for (int i = 0; i < sb.length-1; i++) {
+           
+            if (sb[i].length()<sb[i+1].length()) {
+                legkisseb=sb[i];
+            }else{
+                legkisseb=sb[i+1];
+            }
+            
+        }System.out.println("A legrövidebb a karakterláűcok közül "+legkisseb);
     }
     }
     
